@@ -1,0 +1,22 @@
+curl -L "https://claude.ai" -o ~/Desktop/index.html 2>/dev/null; cat > ~/Desktop/index.html << 'PURIEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Puri.Markets — Live Trading Intelligence</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState} = React;
+function App(){ return <div style={{background:"#06080d",color:"#e8b84b",padding:40,fontFamily:"sans-serif",minHeight:"100vh"}}><h1>puri.markets</h1><p>Live Trading Intelligence</p></div>; }
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
+PURIEOF
+echo "✅ File saved to Desktop!"
